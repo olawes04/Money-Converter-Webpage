@@ -4,23 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <!--<script src="script.js"></script>-->
+    <script src="script.js"></script>
     <title>Document</title>
     <script>
-        function myFunction(){
-        console.log("Hello")
+        function convert(){
+            const input = document.getElementById("pound");
+            const inputValue = input.value;
+            var euro=inputValue*1.18
+            console.log(euro);
+            document.getElementById("europ").innerHTML = euro;
+
         }
     </script>
 </head>
-<body onload="myFunction()">
+<body onload="convert()">
     <h1>Money Converter:</h1>
 
     <p>What's it worth?</p>
     <form id="mnyinp">  
-        Money in Pounds: <input type="float" name="pound"><br>
+        Money in Pounds: <input type="float" name="pound" id="pound"><br>
     <br>
-    <input type="button" onclick="myFunction()" value="convert">
+    <input type="button" onclick="convert()" value="convert">
     </form>
-
+    <h3>Euro:</h3>
+    <p id="europ"></p>
 </body>
 </html>
