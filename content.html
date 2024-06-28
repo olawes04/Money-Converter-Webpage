@@ -7,26 +7,26 @@
     <script src="script.js"></script>
     <title>Document</title>
     <script>
-        function convert(){
-            const input = document.getElementById("pound");
-            const inputValue = input.value;
-            var euro=inputValue*1.18
-            console.log(euro);
-            euro=euro.toFixed(2);
-            document.getElementById("europ").innerHTML = euro;
+        //function convert(){
+        //    const input = document.getElementById("pound");
+        //    const inputValue = input.value;
+        //    var euro=inputValue*1.18
+        //    console.log(euro);
+        //    euro=euro.toFixed(2);
+        //    document.getElementById("europ").innerHTML = euro;
 
-        }
+        //}
     </script>
 </head>
-<body onload="convert()">
+<body  onload = 'populateCurrencyDataAsync()'>
     <h1>Money Converter:</h1>
 
     <p>What's it worth?</p>
     <form id="mnyinp">  
-        Money in Pounds: <input type="float" name="pound" id="pound"><br>
+        Money in Pounds: <input type="text" value = "" name="GBP" id="gbp"><br>
     <br>
     <h4>Exchange Rate: 1GBP = 1.18 EUR</h4>
-    <input type="button" onclick="convert()" value="convert" id="gradient">
+    <input type="button" onclick="convert('GBP','EUR')" value="convert" id="gradient">
     </form>
     <h3>Euro:</h3>
     <p id="europ"></p>
